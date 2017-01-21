@@ -54,7 +54,7 @@ a {
   #descriptors {
     width: 300px;
     height: 30px;
-    margin: 0 auto 13px auto;;
+    margin: 0 auto 10px auto;;
     .desciptor {
       float: left;
       width: 33%;
@@ -91,23 +91,19 @@ a {
     }
   }
   #info {
-    // background: #ad5;
     width: 200px;
     margin: 0 auto;
     display:                 flex;
-    display:                 -webkit-flex; /* Safari 8 */
+    display:                 -webkit-flex;
     flex-wrap:               wrap;
-    -webkit-flex-wrap:       wrap;         /* Safari 8 */
+    -webkit-flex-wrap:       wrap;
     flex-flow: space-between;
     justify-content:         center;
-    -webkit-justify-content: center;       /* Safari 8 */
+    -webkit-justify-content: center;
     a {
-      // background: #37d;
       display: inline-block;
       margin: 2px 6px;
       width: 51px;
-      // float: center;
-      // width: 33%;
     }
     #contact {
       text-align: right;

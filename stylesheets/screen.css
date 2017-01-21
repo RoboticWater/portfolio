@@ -142,7 +142,7 @@ a:hover {
 #main #descriptors {
   width: 300px;
   height: 30px;
-  margin: 0 auto 13px auto;
+  margin: 0 auto 10px auto;
 }
 /* line 58, ../sass/screen.scss */
 #main #descriptors .desciptor {
@@ -193,40 +193,37 @@ a:hover {
   margin: 0 auto;
   display: flex;
   display: -webkit-flex;
-  /* Safari 8 */
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
-  /* Safari 8 */
   flex-flow: space-between;
   justify-content: center;
   -webkit-justify-content: center;
-  /* Safari 8 */
 }
-/* line 104, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 #main #info a {
   display: inline-block;
   margin: 2px 6px;
   width: 51px;
 }
-/* line 112, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 #main #info #contact {
   text-align: right;
 }
-/* line 115, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 #main #info #resume {
   text-align: left;
 }
-/* line 118, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 #main #info #github {
   margin-top: 0;
   width: 20px;
   position: relative;
 }
-/* line 122, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 #main #info #github img {
   width: 20px;
 }
-/* line 125, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 #main #info #github:before {
   background: #3a3739;
   content: '';
@@ -240,7 +237,7 @@ a:hover {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 136, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 #main #info #github:after {
   background: #3a3739;
   content: '';
@@ -254,7 +251,7 @@ a:hover {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 148, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 #main #info h2 {
   font-size: 14pt;
   text-align: center;
