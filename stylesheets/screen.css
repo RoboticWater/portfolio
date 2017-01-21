@@ -103,55 +103,68 @@ h1 {
 /* line 28, ../sass/screen.scss */
 h2 {
   font-family: BebasNeue;
-  font-weight: thin;
+  font-weight: normal;
   font-size: 21.87pt;
   text-transform: uppercase;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
+a {
+  color: #3a3739;
+  text-decoration: none;
+  -moz-transition: color 0.1s ease-out;
+  -o-transition: color 0.1s ease-out;
+  -webkit-transition: color 0.1s ease-out;
+  transition: color 0.1s ease-out;
+}
+/* line 38, ../sass/screen.scss */
+a:hover {
+  color: #91C960;
+}
+
+/* line 42, ../sass/screen.scss */
 #main {
   margin: 230px auto 0 auto;
   width: 960px;
 }
-/* line 38, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 #main #main-logo {
   display: block;
   margin: 0 auto;
   width: 282px;
 }
-/* line 43, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 #main h1 {
   margin: 10px 0 7px 0;
   text-align: center;
 }
-/* line 47, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 #main #descriptors {
   width: 300px;
-  margin: 0 auto;
+  height: 30px;
+  margin: 0 auto 13px auto;
 }
-/* line 51, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 #main #descriptors .desciptor {
   float: left;
   width: 33%;
 }
-/* line 55, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 #main #descriptors .desciptor a {
   display: block;
-  color: #3a3739;
   text-align: center;
-  text-decoration: none;
   width: 100%;
 }
-/* line 63, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 #main #descriptors .desciptor.center {
   position: relative;
 }
-/* line 65, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 #main #descriptors .desciptor.center:before {
   background: #3a3739;
   content: '';
   display: block;
-  left: -6px;
+  left: -7px;
   top: 6px;
   position: absolute;
   width: 2px;
@@ -160,12 +173,12 @@ h2 {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 76, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 #main #descriptors .desciptor.center:after {
   background: #3a3739;
   content: '';
   display: block;
-  right: -6px;
+  right: -7px;
   top: 6px;
   position: absolute;
   width: 2px;
@@ -173,4 +186,76 @@ h2 {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+}
+/* line 93, ../sass/screen.scss */
+#main #info {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  display: -webkit-flex;
+  /* Safari 8 */
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  /* Safari 8 */
+  flex-flow: space-between;
+  justify-content: center;
+  -webkit-justify-content: center;
+  /* Safari 8 */
+}
+/* line 104, ../sass/screen.scss */
+#main #info a {
+  display: inline-block;
+  margin: 2px 6px;
+  width: 51px;
+}
+/* line 112, ../sass/screen.scss */
+#main #info #contact {
+  text-align: right;
+}
+/* line 115, ../sass/screen.scss */
+#main #info #resume {
+  text-align: left;
+}
+/* line 118, ../sass/screen.scss */
+#main #info #github {
+  margin-top: 0;
+  width: 20px;
+  position: relative;
+}
+/* line 122, ../sass/screen.scss */
+#main #info #github img {
+  width: 20px;
+}
+/* line 125, ../sass/screen.scss */
+#main #info #github:before {
+  background: #3a3739;
+  content: '';
+  display: block;
+  left: -7px;
+  top: 6px;
+  position: absolute;
+  width: 1.2pt;
+  height: 9px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 136, ../sass/screen.scss */
+#main #info #github:after {
+  background: #3a3739;
+  content: '';
+  display: block;
+  right: -7px;
+  top: 6px;
+  position: absolute;
+  width: 1.2pt;
+  height: 9px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 148, ../sass/screen.scss */
+#main #info h2 {
+  font-size: 14pt;
+  text-align: center;
 }

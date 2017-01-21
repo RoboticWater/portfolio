@@ -11,7 +11,7 @@ $black:  #3a3739;
 $red:    #ce4148;
 $orange: #cc5f42;
 $yellow: #d8cd4e;
-$lgreen: #a7d05e;
+$lgreen: #91C960;
 $green:  #58bd7f;
 $blue:   #56c0a3;
 
@@ -27,11 +27,18 @@ h1 {
 }
 h2 {
   font-family: BebasNeue;
-  font-weight: thin;
+  font-weight: normal;
   font-size: 21.87pt;
   text-transform: uppercase;
 }
-
+a {
+  color: $black;
+  text-decoration: none;
+  @include transition(color 0.1s ease-out);
+  &:hover {
+    color: $lgreen;
+  }
+}
 #main {
   margin: 230px auto 0 auto;
   width: 960px;
@@ -45,19 +52,15 @@ h2 {
     text-align: center;
   }
   #descriptors {
-    // background: #a21;
     width: 300px;
-    margin: 0 auto;
+    height: 30px;
+    margin: 0 auto 13px auto;;
     .desciptor {
-      // background: #1d2;
       float: left;
       width: 33%;
       a {
         display: block;
-        // background: #3ae;
-        color: $black;
         text-align: center;
-        text-decoration: none;
         width: 100%;
       }
       &.center {
@@ -66,7 +69,7 @@ h2 {
           background: $black;
           content: '';
           display: block;
-          left: -6px;
+          left: -7px;
           top: 6px;
           position: absolute;
           width: 2px;
@@ -77,7 +80,7 @@ h2 {
           background: $black;
           content: '';
           display: block;
-          right: -6px;
+          right: -7px;
           top: 6px;
           position: absolute;
           width: 2px;
@@ -86,5 +89,65 @@ h2 {
         }
       }
     }
+  }
+  #info {
+    // background: #ad5;
+    width: 200px;
+    margin: 0 auto;
+    display:                 flex;
+    display:                 -webkit-flex; /* Safari 8 */
+    flex-wrap:               wrap;
+    -webkit-flex-wrap:       wrap;         /* Safari 8 */
+    flex-flow: space-between;
+    justify-content:         center;
+    -webkit-justify-content: center;       /* Safari 8 */
+    a {
+      // background: #37d;
+      display: inline-block;
+      margin: 2px 6px;
+      width: 51px;
+      // float: center;
+      // width: 33%;
+    }
+    #contact {
+      text-align: right;
+    }
+    #resume {
+      text-align: left;
+    }
+    #github {
+      margin-top: 0;
+      width: 20px;
+      position: relative;
+      img {
+        width: 20px;
+      }
+      &:before {
+        background: $black;
+        content: '';
+        display: block;
+        left: -7px;
+        top: 6px;
+        position: absolute;
+        width: 1.2pt;
+        height: 9px;
+        @include border-radius(2px);
+      }
+      &:after {
+        background: $black;
+        content: '';
+        display: block;
+        right: -7px;
+        top: 6px;
+        position: absolute;
+        width: 1.2pt;
+        height: 9px;
+        @include border-radius(2px);
+      }
+    }
+    h2 {
+      font-size: 14pt;
+      text-align: center;
+    }      
   }
 }
