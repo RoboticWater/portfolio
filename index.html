@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+  <script type="text/javascript" src="js/scripts.js"></script>
   <title>John Britti</title>
 </head>
 <body>
   <div id="main">
-    <img id="main-logo" src="resources/jb-logo-final.svg" alt="">
+    <div id="main-logo">
+      <svg id="logo-mtn" viewBox="0 0 211.4 185.1">
+        <polygon class="st0" points="174.4,128.2 165.9,143.1 134.2,110.2 111.2,134.1 78.9,69 49.7,127.9 44,117.8 23.6,153.7 36.9,153.7 
+          44,153.7 52.5,153.7 64.4,153.7 78.9,153.7 83.5,153.7 92.2,153.7 98.9,153.7 114.5,153.7 120.9,153.7 122.2,153.7 134.2,153.7 
+          145.4,153.7 159.9,153.7 174.4,153.7 176.2,153.7 188.9,153.7"/>
+        <polyline class="st1" points="78.9,69 78.9,109.4 83.5,101.7 106,139.4 111.2,134.1 78.9,69"/>
+        <polyline class="st2" points="78.9,69 49.7,127.9 58.6,143.5 78.9,109.4 78.9,69"/>
+        <polyline class="st1" points="134.2,110.2 134.2,143.6 145.4,153.7 134.2,153.7 120.9,153.7 176.2,153.7 159.9,153.7 165.9,143.1 
+          134.2,110.2"/>
+        <polyline class="st2" points="134.2,110.2 111.2,134.1 114.1,140 122.2,132.7 134.2,143.6 134.2,110.2"/>
+        <polyline class="st3" points="111.2,134.1 106,139.4 109,144.6 114.1,140 111.2,134.1"/>
+        <polyline class="st1" points="174.4,128.2 174.4,151.9 176.2,153.7 188.9,153.7 174.4,128.2"/>
+        <polyline class="st2" points="174.4,151.9 174.4,153.7 159.9,153.7 176.2,153.7 174.4,151.9"/>
+        <polyline class="st2" points="174.4,128.2 165.9,143.1 174.4,151.9 174.4,128.2"/>
+        <polyline class="st3" points="165.9,143.1 159.9,153.7 174.4,153.7 174.4,151.9 165.9,143.1"/>
+        <polyline class="st1" points="44,117.8 44,139.5 49.7,127.9 44,117.8"/>
+        <polyline class="st3" points="49.7,127.9 44,139.5 44,153.7 36.9,153.7 64.4,153.7 52.5,153.7 58.6,143.5 49.7,127.9"/>
+        <polyline class="st2" points="44,117.8 23.6,153.7 36.9,153.7 44,139.5 44,117.8"/>
+        <polyline class="st4" points="44,139.5 36.9,153.7 44,153.7 44,139.5"/>
+        <polyline class="st2" points="134.2,143.6 134.2,153.7 145.4,153.7 134.2,143.6"/>
+        <polyline class="st3" points="122.2,132.7 122.2,153.7 120.9,153.7 134.2,153.7 134.2,143.6 122.2,132.7"/>
+        <polyline class="st4" points="122.2,132.7 114.1,140 120.9,153.7 122.2,153.7 122.2,132.7"/>
+        <polyline class="st0" points="114.1,140 109,144.6 114.5,153.7 98.9,153.7 120.9,153.7 114.1,140"/>
+        <polyline class="st2" points="83.5,101.7 83.5,153.7 78.9,153.7 92.2,153.7 106,139.4 83.5,101.7"/>
+        <polyline class="st4" points="106,139.4 92.2,153.7 98.9,153.7 109,144.6 106,139.4"/>
+        <polyline class="st5" points="109,144.6 98.9,153.7 114.5,153.7 109,144.6"/>
+        <polyline class="st3" points="83.5,101.7 78.9,109.4 78.9,153.7 83.5,153.7 83.5,101.7"/>
+        <polyline class="st4" points="78.9,109.4 58.6,143.5 64.4,153.7 78.9,153.7 78.9,109.4"/>
+        <polyline class="st0" points="58.6,143.5 52.5,153.7 64.4,153.7 58.6,143.5"/>
+      </svg>
+      <img id="main-logo" src="resources/jb-logo-final.svg" alt="">
+    </div>
     <h1>John Britti</h1>
     <div id="descriptors">
-      <h2 class="desciptor"><a href="#code">Coder</a></h2>
-      <h2 class="desciptor center"><a href="#design">Designer</a></h2>
-      <h2 class="desciptor"><a href="#make">Maker</a></h2>
+      <h2 class="desciptor" onmouseover="changeMtnColor('yellow')" onmouseleave="changeMtnColor('green')"><a id="button-code" href="#code">Coder</a></h2>
+      <h2 class="desciptor center" onmouseover="changeMtnColor('blue')" onmouseleave="changeMtnColor('green')"><a id="button-design" href="#design">Designer</a></h2>
+      <h2 class="desciptor" onmouseover="changeMtnColor('red')" onmouseleave="changeMtnColor('green')"><a id="button-make" href="#make">Maker</a></h2>
     </div>
     <div id="info">
       <h2 id="contact"><a href="#contact">Contact</a></h2>

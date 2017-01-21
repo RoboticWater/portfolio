@@ -10,7 +10,7 @@
 $black:  #3a3739;
 $red:    #ce4148;
 $orange: #cc5f42;
-$yellow: #d8cd4e;
+$yellow: #e5d849;
 $lgreen: #91C960;
 $green:  #58bd7f;
 $blue:   #56c0a3;
@@ -39,6 +39,15 @@ a {
     color: $lgreen;
   }
 }
+#button-code:hover {
+  color: $yellow;
+}
+#button-design:hover {
+  color: $blue;
+}
+#button-make:hover {
+  color: $red;
+}
 #main {
   margin: 230px auto 0 auto;
   width: 960px;
@@ -46,6 +55,20 @@ a {
     display: block;
     margin: 0 auto;
     width: 282px;
+    img {
+      width: 282px;
+    }
+    svg {
+      width: 282px;
+      position: absolute;
+      z-index: -1;
+      .st0{fill:#17B24C;@include transition(fill 0.5s ease-out);}
+      .st1{fill:#C0DC8E;@include transition(fill 0.5s ease-out);}
+      .st2{fill:#91C960;@include transition(fill 0.5s ease-out);}
+      .st3{fill:#6BBE51;@include transition(fill 0.5s ease-out);}
+      .st4{fill:#47B74C;@include transition(fill 0.5s ease-out);}
+      .st5{fill:#00AE4D;@include transition(fill 0.5s ease-out);}
+    }
   }
   h1 {
     margin: 10px 0 7px 0;
