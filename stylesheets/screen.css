@@ -123,42 +123,47 @@ a:hover {
 }
 
 /* line 42, ../sass/screen.scss */
+b {
+  font-weight: bold;
+}
+
+/* line 45, ../sass/screen.scss */
 #button-code:hover {
   color: #ce4148;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 #button-design:hover {
   color: #56c0a3;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 #button-make:hover {
   color: #e5d849;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 #main {
   margin: 230px auto 0 auto;
   width: 960px;
 }
-/* line 54, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 #main #main-logo {
   display: block;
   margin: 0 auto;
   width: 282px;
 }
-/* line 58, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 #main #main-logo img {
   width: 282px;
 }
-/* line 61, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 #main #main-logo svg {
   width: 282px;
   position: absolute;
   z-index: -1;
 }
-/* line 65, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 #main #main-logo svg .st0 {
   fill: #17B24C;
   -moz-transition: fill 0.5s ease-out;
@@ -166,7 +171,7 @@ a:hover {
   -webkit-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
 }
-/* line 66, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 #main #main-logo svg .st1 {
   fill: #C0DC8E;
   -moz-transition: fill 0.5s ease-out;
@@ -174,7 +179,7 @@ a:hover {
   -webkit-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
 }
-/* line 67, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 #main #main-logo svg .st2 {
   fill: #91C960;
   -moz-transition: fill 0.5s ease-out;
@@ -182,7 +187,7 @@ a:hover {
   -webkit-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
 }
-/* line 68, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 #main #main-logo svg .st3 {
   fill: #6BBE51;
   -moz-transition: fill 0.5s ease-out;
@@ -190,7 +195,7 @@ a:hover {
   -webkit-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
 }
-/* line 69, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 #main #main-logo svg .st4 {
   fill: #47B74C;
   -moz-transition: fill 0.5s ease-out;
@@ -198,7 +203,7 @@ a:hover {
   -webkit-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
 }
-/* line 70, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 #main #main-logo svg .st5 {
   fill: #00AE4D;
   -moz-transition: fill 0.5s ease-out;
@@ -206,33 +211,33 @@ a:hover {
   -webkit-transition: fill 0.5s ease-out;
   transition: fill 0.5s ease-out;
 }
-/* line 73, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 #main h1 {
-  margin: 10px 0 7px 0;
+  margin: 10px 0 0 0;
   text-align: center;
 }
-/* line 77, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #main #descriptors {
   width: 300px;
   height: 30px;
-  margin: 0 auto 10px auto;
+  margin: 0 auto;
 }
-/* line 81, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 #main #descriptors .desciptor {
   float: left;
   width: 33%;
 }
-/* line 84, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 #main #descriptors .desciptor a {
   display: block;
   text-align: center;
   width: 100%;
 }
-/* line 89, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 #main #descriptors .desciptor.center {
   position: relative;
 }
-/* line 91, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 #main #descriptors .desciptor.center:before {
   background: #3a3739;
   content: '';
@@ -246,7 +251,7 @@ a:hover {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 102, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 #main #descriptors .desciptor.center:after {
   background: #3a3739;
   content: '';
@@ -260,10 +265,10 @@ a:hover {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 116, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #main #info {
   width: 200px;
-  margin: 0 auto;
+  margin: 5px auto;
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
@@ -272,31 +277,31 @@ a:hover {
   justify-content: center;
   -webkit-justify-content: center;
 }
-/* line 126, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 #main #info a {
   display: inline-block;
   margin: 2px 6px;
   width: 51px;
 }
-/* line 131, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 #main #info #contact {
   text-align: right;
 }
-/* line 134, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 #main #info #resume {
   text-align: left;
 }
-/* line 137, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 #main #info #github {
   margin-top: 0;
   width: 20px;
   position: relative;
 }
-/* line 141, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 #main #info #github img {
   width: 20px;
 }
-/* line 144, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 #main #info #github:before {
   background: #3a3739;
   content: '';
@@ -310,7 +315,7 @@ a:hover {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 155, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 #main #info #github:after {
   background: #3a3739;
   content: '';
@@ -324,8 +329,18 @@ a:hover {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 167, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 #main #info h2 {
   font-size: 14pt;
   text-align: center;
+}
+
+/* line 176, ../sass/screen.scss */
+#contact-information {
+  margin: 0 auto 10px auto;
+  padding: 3px 0;
+  text-align: center;
+  width: 220px;
+  border-top: 1px solid #3a3739;
+  border-bottom: 1px solid #3a3739;
 }

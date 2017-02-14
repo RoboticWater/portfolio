@@ -39,6 +39,9 @@ a {
     color: $lgreen;
   }
 }
+b {
+  font-weight: bold;
+}
 #button-code:hover {
   color: $red;
 }
@@ -71,13 +74,13 @@ a {
     }
   }
   h1 {
-    margin: 10px 0 7px 0;
+    margin: 10px 0 0 0;
     text-align: center;
   }
   #descriptors {
     width: 300px;
     height: 30px;
-    margin: 0 auto 10px auto;;
+    margin: 0 auto;
     .desciptor {
       float: left;
       width: 33%;
@@ -115,7 +118,7 @@ a {
   }
   #info {
     width: 200px;
-    margin: 0 auto;
+    margin: 5px auto;
     display:                 flex;
     display:                 -webkit-flex;
     flex-wrap:               wrap;
@@ -169,4 +172,12 @@ a {
       text-align: center;
     }      
   }
+}
+#contact-information {
+  margin: 0 auto 10px auto;
+  padding: 3px 0;
+  text-align: center;
+  width: 220px;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;  
 }
