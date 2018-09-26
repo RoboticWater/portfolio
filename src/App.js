@@ -1,47 +1,59 @@
 import React, { Component } from 'react';
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link
-} from "react-router-dom";
 import './App.css';
 
 import MainLinks from './components/MainLinks';
 
+const clamp = (val, min, max) => {
+	return val > max ? max : (val < min ? min : val);
+}
+
 class App extends Component {
+	constructor(props) {
+    super(props);
+    this.scrollContainer = React.createRef();
+    this.state = {
+    	scroll: 0
+    }
+  }
+
+	componentDidMount() {
+	    window.addEventListener('scroll', this.handleScroll.bind(this));
+	}
+
+	componentWillUnmount() {
+	    window.removeEventListener('scroll', this.handleScroll.bind(this));
+	}
+
+	handleScroll(event) {
+		this.setState({ scroll: event.srcElement.scrollingElement.scrollTop });
+	}
+
 	render() {
 		return (
-			<Router className="App">
-				<Route render={({ location }) => (
-					<div className="fill">
-						<div className="name">
-							<span className="john">John</span>
-							<span className="britti">Britti</span>
-							<span className="blurb">Code. Art. Web. Games.</span>
-						</div>
+			<div className="App" ref={this.scrollContainer}>
+				<div className="landing">
+					<div className="fixed">
 						<MainLinks/>
-
-						<div style={styles.content}>
-							<TransitionGroup>
-								<CSSTransition
-									key={location.key}
-									classNames="fade"
-									timeout={300}>
-									<Switch location={location}>
-										<Route exact path="/work" component={Work} />
-										<Route exact path="/work/:artifact" component={Work} />
-										<Route exact path="/about" component={About} />
-										<Route exact path="/contact" component={Contact} />
-										<Route render={() => <div>Not Found</div>} />
-									</Switch>
-								</CSSTransition>
-							</TransitionGroup>
+						<div className="about">
+							<div className="main">
+								<span className="name john">John</span>
+								<span className="name britti">Britti</span>
+								<span className="links"><a href="">resume</a> - <a href="">github</a></span>
+							</div>
+							<div className="blurb">
+								<p>front-end developer in Atlanta, GA</p>
+								<p>passionate about</p>
+								<p>aesthetic experiences and</p>
+								<p>adaptive technologies</p>
+							</div>
 						</div>
+						<div className="scroll-prompt">Works</div>
 					</div>
-				)}/>
-			</Router>
+				</div>
+				<div className="works">
+					<div className="shadow" style={{opacity: clamp(this.state.scroll / 50, 0, 1) }}></div>
+				</div>
+			</div>
 		);
 	}
 }

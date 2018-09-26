@@ -1,15 +1,27 @@
+@keyframes slideUp { 
+  0% { left: -40px; } 
+  100% { left: 0; }
+}
+
+@keyframes slideDown { 
+  0% { left: 40px; } 
+  100% { left: 0; }
+}
+
+@keyframes scaleIn { 
+  0% { transform: scale(0.8); } 
+  100% { transform: none; }
+}
+
 .MainLinks {
 	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%,-50%);
 	text-align: center;
 	perspective: 45px;
 	.link {
 		text-transform: uppercase;
 		z-index: 1;
 		position: relative;
-		font-size: calc(3em + 1vw);
+		font-size: 7em;
 		line-height: 0.9em;
 		cursor: pointer;
 		display: inline-block;
@@ -46,14 +58,22 @@
 			}
 		}
 		&.front {
+			font-size: 7.2em;
 			z-index: 3;
-			line-height: 0.9em;
+			line-height: 0.8em;
+			animation: 0.4s ease scaleIn;
 		}
-		.top:hover {
-			transform: scale(1.07) translateY(-3px);
+		&.top {
+			animation: 0.4s ease slideUp;
+			&:hover {
+				transform: scale(1.07) translateY(-3px);
+			}
 		}
-		.bottom:hover {
-			transform: scale(1.07) translateY(3px);
+		&.bottom {
+			animation: 0.4s ease slideDown;
+			&:hover {
+				transform: scale(1.07) translateY(3px);
+			}
 		}
 	}
 	.link-plane {
@@ -113,7 +133,10 @@
 			top: 45%;
 		}
 		.link {
-			font-size: 3em;
+			font-size: 4em;
+			&.front {
+				font-size: 4.3em; 
+			}
 		}
 	}
 }

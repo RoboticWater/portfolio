@@ -10,21 +10,21 @@ class App extends Component {
         <div className="link top">
           <div className="link__mask">
           <div className="overlay"></div>
-          <span className="link__content">Contact</span>
+          <span className="link__content">Code</span>
           </div>
         </div>
         <div className="link-plane blue middle"></div>
         <div className="link front">
           <div className="link__mask">
           <div className="overlay"></div>
-          <span className="link__content">Works</span>
+          <span className="link__content">AI</span>
           </div>
         </div>
         <div className="link-plane yellow middle"></div>
         <div className="link bottom">
           <div className="link__mask">
           <div className="overlay"></div>
-          <span className="link__content">About</span>
+          <span className="link__content">Design</span>
           </div>
         </div>
         <div className="link-plane red"></div>
