@@ -94,6 +94,11 @@ body {
 	left: 50%;
 	transform: translateX(-50%);
 	padding: 20px 30px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 	&:after {
 		position: absolute;
 		content: '';

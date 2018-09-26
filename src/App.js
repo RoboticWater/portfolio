@@ -38,7 +38,7 @@ class App extends Component {
 							<div className="main">
 								<span className="name john">John</span>
 								<span className="name britti">Britti</span>
-								<span className="links"><a href="">resume</a> - <a href="">github</a></span>
+								<span className="links"><a href={process.env.PUBLIC_URL + "/content/jb_resume_fall18.pdf"} target="_blank">resume</a></span>
 							</div>
 							<div className="blurb">
 								<p>front-end developer in Atlanta, GA</p>
