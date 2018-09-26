@@ -4,6 +4,8 @@ import './App.css';
 
 import MainLinks from './components/MainLinks';
 
+import resume from './content/jb_resume_fall18.pdf';
+
 const clamp = (val, min, max) => {
 	return val > max ? max : (val < min ? min : val);
 }
@@ -46,7 +48,7 @@ class App extends Component {
 							<div className="main">
 								<span className="name john">John</span>
 								<span className="name britti">Britti</span>
-								<span className="links"><a href={process.env.PUBLIC_URL + "/content/jb_resume_fall18.pdf"} target="_blank">resume</a></span>
+								<span className="links"><a href={resume} target="_blank">resume</a>- <a href="https://github.com/RoboticWater">github</a></span>
 							</div>
 							<div className="blurb">
 								<p>front-end developer in Atlanta, GA</p>
