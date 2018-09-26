@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-scroll'
 import './App.css';
 
 import MainLinks from './components/MainLinks';
@@ -31,7 +32,14 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App" ref={this.scrollContainer}>
+				<header className="header" style={{opacity: clamp((this.state.scroll - 30) / 200., 0, 1) }}>
+					<Link
+						smooth={true}
+						duration={350}
+						to="home">Home</Link>
+				</header>
 				<div className="landing">
+					<div id="home"></div>
 					<div className="fixed">
 						<MainLinks/>
 						<div className="about">
@@ -47,11 +55,16 @@ class App extends Component {
 								<p>adaptive technologies</p>
 							</div>
 						</div>
-						<div className="scroll-prompt">Works</div>
+						<Link
+							className="scroll-prompt"
+							smooth={true}
+							duration={350}
+							to="works">Works</Link>
 					</div>
 				</div>
 				<div className="works">
-					<div className="shadow" style={{opacity: clamp(this.state.scroll / 50, 0, 1) }}></div>
+					<div id="works"></div>
+					<div className="shadow" style={{opacity: clamp(this.state.scroll / 200, 0, 1) }}></div>
 				</div>
 			</div>
 		);

@@ -17,6 +17,15 @@ body {
 	animation: fadeIn 0.5s ease;
 }
 
+.header {
+	position: fixed;
+	z-index: 20;
+	padding: 40px;
+	a {
+		cursor: pointer;
+	}
+}
+
 .landing {
 	height: 100vh;
 	/* z-index: -1; */
@@ -88,6 +97,8 @@ body {
 }
 
 .scroll-prompt {
+	color: #2e2e2e;
+	text-decoration: none;
 	text-transform: uppercase;
 	position: absolute;
 	bottom: 10%;
@@ -99,6 +110,7 @@ body {
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	cursor: pointer;
 	&:after {
 		position: absolute;
 		content: '';
