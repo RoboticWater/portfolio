@@ -61,16 +61,16 @@
 			font-size: 7.2em;
 			z-index: 3;
 			line-height: 0.8em;
-			animation: 0.4s ease scaleIn;
+			animation: 0.65s cubic-bezier(.25,.46,.26,.98) scaleIn;
 		}
 		&.top {
-			animation: 0.4s ease slideUp;
+			animation: 0.65s cubic-bezier(.25,.46,.26,.98) slideUp;
 			&:hover {
 				transform: scale(1.07) translateY(-3px);
 			}
 		}
 		&.bottom {
-			animation: 0.4s ease slideDown;
+			animation: 0.65s cubic-bezier(.25,.46,.26,.98) slideDown;
 			&:hover {
 				transform: scale(1.07) translateY(3px);
 			}
