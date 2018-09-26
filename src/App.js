@@ -32,7 +32,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App" ref={this.scrollContainer}>
-				<header className="header" style={{opacity: clamp((this.state.scroll - 30) / 200., 0, 1) }}>
+				<header className="header" style={{opacity: clamp((this.state.scroll - 30) / 200., 0, 1), display: (this.state.scroll > 30 ? 'block' : 'none') }}>
 					<Link
 						smooth={true}
 						duration={350}
@@ -51,7 +51,7 @@ class App extends Component {
 							<div className="blurb">
 								<p>front-end developer in Atlanta, GA</p>
 								<p>passionate about</p>
-								<p>aesthetic experiences and</p>
+								<p>aesthetic interactions and</p>
 								<p>adaptive technologies</p>
 							</div>
 						</div>
