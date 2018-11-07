@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import './MainLinks.css';
 
-class App extends Component {
+class MainLinks extends Component {
   render() {
     return (
       <div className={classNames("MainLinks", {hide: this.props.hide})}>
@@ -33,4 +33,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default MainLinks;

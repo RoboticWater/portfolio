@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:900|Barlow:300,400,500');
 
-@keyframes fadeIn { 
-  0% { opacity: 0; } 
-  100% { opacity: 1; }
-}
-
 body {
 	font-family: 'Barlow', sans-serif;
 	font-weight: 900;
@@ -13,41 +8,50 @@ body {
 	padding: 0;
 }
 
+@keyframes fadeIn { 
+  0% { opacity: 0; } 
+  100% { opacity: 1; }
+}
+
 .App {
 	animation: fadeIn 0.5s ease;
 }
 
-.header {
-	position: fixed;
-	z-index: 20;
-	padding: 40px;
-	a {
-		cursor: pointer;
-	}
-}
-
-.landing {
-	height: 100vh;
-	/* z-index: -1; */
-	.fixed {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-	}
-}
-
-.about {
-	position: absolute;
-	bottom: 25%;
-	left: 50%;
-	transform: translateX(-50%);
+.fixed {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.main-div {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+}
+
+.left-box {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.about {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
 	.main {
+		padding-bottom: 5px;
 		.name {
 			font-family: 'Raleway', sans-serif;
 			display: block;
@@ -67,16 +71,22 @@ body {
 				color: #2e2e2e;
     		text-decoration: none;
   			border-bottom: 1px #3e3e3e dashed;
+  			margin: 0 4px;
   			&:hover {
   				color: #FC4C5D;
   				border-bottom-color: #FC4C5D;
+  			}
+  			&:first-child {
+  				margin: 0 4px 0 0;
+  			}
+  			&:last-child {
+  				margin: 0 0 0 4px;
   			}
 			}
 		}
 	}
 	.blurb {
 		font-weight: 300;
-		position: absolute;
 		width: 200%;
 		left: 108%;
 		top: 3px;
@@ -89,11 +99,61 @@ body {
 	}
 }
 
-@keyframes point { 
-  0% { top: 50px; } 
-  20% { top: 60px; } 
-  40% { top: 50px; } 
-  100% { top: 50px; } 
+.works {
+	min-height: 100vh;
+	position: relative;
+	background: #fff;
+	z-index: 12;
+	width: 100%;
+	.shadow {
+		position: absolute;
+		z-index: 11;
+		top: -60px;
+    height: 60px;
+		left: 0;
+		width: 100%;
+		background: linear-gradient(180deg,transparent,#66666622);
+		pointer-events: none;
+	}
+}
+
+.landing {
+	height: 100vh;
+	transition: height 1s steps(1);
+}
+
+a {
+	cursor: pointer;
+}
+
+.header {
+	position: fixed;
+	z-index: 20;
+	padding: 40px;
+	a {
+		position: relative;
+		&:after {
+			position: absolute;
+			content: '';
+			background: #1E1E1E; 
+			width: 0;
+			height: 2px;
+			bottom: -4px;
+			left: 50%;
+			transition: width 0.2s cubic-bezier(.7,.04,.08,.91), left 0.2s cubic-bezier(.7,.04,.08,.91);
+			border-radius: 1px;
+		}
+		&:hover:after {
+			width: 100%;
+			left: 0;
+		}
+	}
+}
+
+
+.MainLinks {
+	font-family: 'Raleway', sans-serif;
+	transform: rotate(-90deg);
 }
 
 .scroll-prompt {
@@ -120,79 +180,98 @@ body {
 		width: 10px;
 		height: 10px;
 		left: 50%;
-		animation: point 2.3s infinite cubic-bezier(.51,.02,.54,1);
+		top: 50px;
+		animation: point 3.5s cubic-bezier(.51,.02,.54,1);
 	}
 }
 
-.MainLinks {
+@keyframes point { 
+  0% { top: 50px; } 
+  20% { top: 50px; } 
+  30% { top: 60px; } 
+  40% { top: 50px; } 
+  100% { top: 50px; } 
+}
+
+@media only screen and (max-width: 800px) and (orientation:portrait) {
+	.fixed {
+		flex-direction: column;
+	}
+	.scroll-prompt {
+		display: none;
+	}
+	.main-div {
+		&.left {
+			flex: 1.5;
+			margin-top: 40px;
+		}
+		&.right {
+			margin-bottom: 40px;
+		}
+	}
+	.about .main .name {
+		font-size: 3.8em;
+		line-height: 0.85em;
+		&.britti {
+			font-size: calc(3.8em * 0.85);
+		}
+	}
+	.App .about .blurb {
+		font-size: 20px;
+	}
+}
+
+h1 {
 	font-family: 'Raleway', sans-serif;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%,-50%) rotate(-90deg);
+	text-transform: uppercase;
+	font-weight: 900;
+	margin: 0;
 }
+
 .works {
-	height: 100vh;
-	position: relative;
-	background: #fff;
-	z-index: 12;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 	width: 100%;
-	.shadow {
-		position: absolute;
-		z-index: 11;
-		top: -60px;
-    height: 60px;
-		left: 0;
+	flex-flow: column;
+	.works-header {
 		width: 100%;
-		background: linear-gradient(180deg,transparent,#66666622);
-		pointer-events: none;
+		text-align: right;
+		font-size: 26px;
+		margin: 32px 0 32px 0;
+		h1 {
+			margin-right: 40px;
+		}
+	}
+	.projects {
+		width: 100%;
 	}
 }
 
-@media only screen and (max-width: 1000px)  {
-	.App {
-		.about {
-			left: 12%;
-			transform: none;
-			.blurb {
-				top: auto;
-				left: 0;
-				bottom: -95%;
-			}
-		}
-		.scroll-prompt {
-			bottom: 20%;
-			right: 10%;
-			left: auto;
-		}
+@media only screen and (max-width: 420px) {
+	.App .about .blurb {
+		font-size: 16px;
 	}
 }
 
-@media only screen and (max-width: 600px)  {
-	.App {
-		.about {
-			left: 12%;
-			bottom: 20%;
-			transform: none;
-			.name {
-				span {
-					font-size: 3.5em;
-					&.britti {
-						font-size: calc(3.5em * 0.85);
-					}
-				}
-			}
-			.blurb {
-				top: auto;
-				font-size: 17px;
-				left: 0;
-				bottom: -70%;
-			}
+@media only screen and (max-width: 830px) {
+	.App .about .blurb {
+		font-size: 16px;
+	}
+	.scroll-prompt {
+		display: none;
+	}
+	.main-div {
+		&.left {
+			margin-left: 10px;
 		}
-		.scroll-prompt {
-			display: none;
+		&.right {
+			margin-right: 10px;
 		}
-		.MainLinks {
-			top: calc(50% - 7em);
-		}
+	}
+	.header {
+		padding: 20px;
 	}
 }
